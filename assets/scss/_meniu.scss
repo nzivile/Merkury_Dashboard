@@ -1,0 +1,80 @@
+.meniu {
+  width: 320px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e1a35;
+  &--icon {
+    height: 120px;
+    padding: 30px 42px 36px;
+    border-bottom: 2px solid #0d172e;
+  }
+  &--logo {
+    width: 182px;
+    height: 52px;
+    background-image: url("../img/icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &--item {
+    padding: 40px 15px 40px 80px;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 48px;
+    position: relative;
+    border-bottom: 2px solid #0d172e;
+    border-left: 10px solid transparent;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+    &:hover,&__active{
+      background-color: #122143;
+      border-left: 10px solid #5584ff;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      background-position: center center;
+      background-repeat: no-repeat;
+      top: 50px;
+      left: 39px;
+    }
+    &__home {
+      &::before {
+        background-image: url("../img/home.png");
+      }
+    }
+    &__workflow {
+      &::before {
+        background-image: url("../img/workflow.png");
+      }
+    }
+    &__statistic {
+      &::before {
+        background-image: url("../img/statistic.png");
+      }
+    }
+    &__calendar {
+      &::before {
+        background-image: url("../img/calendar.png");
+      }
+    }
+    &__users {
+      &::before {
+        background-image: url("../img/user.png");
+      }
+    }
+    &__settings {
+      &::before {
+        background-image: url("../img/settings.png");
+      }
+    }
+
+  }
+}
